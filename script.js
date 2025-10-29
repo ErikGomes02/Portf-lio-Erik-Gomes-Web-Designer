@@ -121,15 +121,45 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   const particles = [];
-  const particleCount = 25; // número de partículas
+  const particleCount = 30;
   const mouse = { x: width / 2, y: height / 2 };
 
   class Particle {
-    constructor() {
-      this.reset();
-    }
+    constructor() { this.reset(); }
     reset() {
       this.x = mouse.x;
       this.y = mouse.y;
       this.size = Math.random() * 2 + 1;
-      th
+      this.speedX = (Math.random() - 0.5) * 1.2;
+      this.speedY = (Math.random() - 0.5) * 1.2;
+      this.alpha = Math.random() * 0.5 + 0.3;
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      this.alpha -= 0.005;
+      if (this.alpha <= 0) this.reset();
+    }
+    draw() {
+      ctx.fillStyle = `rgba(255,255,255,${this.alpha})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+      ctx.fill();
+    }
+  }
+
+  for(let i=0;i<particleCount;i++){particles.push(new Particle());}
+
+  window.addEventListener('mousemove', (e)=>{ mouse.x=e.clientX; mouse.y=e.clientY; });
+
+  function animateParticles(){
+    ctx.clearRect(0,0,width,height);
+    particles.forEach(p=>{
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  animateParticles();
+});
