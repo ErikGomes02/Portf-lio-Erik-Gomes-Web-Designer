@@ -40,7 +40,7 @@ body{
 .nav-list a{display:block;padding:.35rem .5rem;color:var(--text);text-decoration:none;border-radius:8px}
 .nav-list a:focus, .nav-list a:hover{background:var(--glass);outline:none}
 
-/* Hero */
+/* Hero com gradiente animado */
 .hero{
   padding:3rem 0;
   background: linear-gradient(270deg, #071127, #081427, #0f1724);
@@ -59,7 +59,11 @@ body{
 .lead{color:var(--muted);max-width:60ch}
 .accent{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-cta .btn{margin-right:.5rem}
-.hero-features{display:none;list-style:none;margin:1rem 0 0;padding:0;color:var(--muted)}
+
+/* Botões com fonte preta */
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:10px;border:0;background:transparent;color:black;cursor:pointer;transition: transform 0.25s ease, box-shadow 0.25s ease;}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:black}
+.btn.ghost{border:1px solid rgba(255,255,255,0.06);color:black}
 
 /* Sections */
 h2{font-size:1.25rem;margin:0 0 .75rem}
@@ -69,11 +73,4 @@ h2{font-size:1.25rem;margin:0 0 .75rem}
 .cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem}
 .projects-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem}
 .project img{width:100%;height:auto;border-radius:8px;display:block}
-.project h3{margin:.5rem 0 0}
-.project-meta{font-size:.85rem;color:var(--muted)}
-
-/* Botões */
-.btn{display:inline-block;padding:.6rem .9rem;border-radius:10px;border:0;background:transparent;color:black;cursor:pointer;text-decoration:none;transition: transform 0.25s ease, box-shadow 0.25s ease;}
-.btn.small{padding:.4rem .6rem;font-size:.9rem}
-.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:black}
-.btn.ghost{border:1px solid rgba(255
+.project
