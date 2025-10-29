@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfólio de Erik Gomes — Front-end developer autodidata. Criativo e dedicado, localizado em Salvador, Bahia." />
+  <title>Erik Gomes — Web Designer & Front-end</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Ir para início">
+        <!-- Inline SVG logo (arquivo logo.svg também fornecido) -->
+        <svg id="logo" width="56" height="56" viewBox="0 0 64 64" role="img" aria-labelledby="logoTitle logoDesc">
+          <title id="logoTitle">Logo Erik Gomes</title>
+          <desc id="logoDesc">Símbolo estilizado com as iniciais E G formando um círculo criativo</desc>
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#3b82f6" />
+              <stop offset="1" stop-color="#7c3aed" />
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#g1)" />
+          <path d="M20 44 L28 20 L36 44 Z" fill="white" opacity="0.95" />
+          <path d="M40 24 L46 38 L52 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="brand-text">
+          <strong>Erik Gomes</strong><small>Front-end Designer</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+        <button id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Abrir menu">☰</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" role="main">
+    <section id="hero" class="hero" aria-labelledby="heroTitle heroDesc">
+      <div class="container hero-inner">
+        <h1 id="heroTitle">Olá — eu sou <span class="accent">Erik Gomes</span></h1>
+        <p id="heroDesc" class="lead">
+          Web designer e front-end developer autodidata de <strong>Salvador, Bahia</strong>. Com 1 ano de dedicação profissional, trago criatividade e compromisso para transformar ideias em interfaces bonitas e funcionais.
+        </p>
+        <p class="hero-cta">
+          <a class="btn primary" href="#contato">Contrate-me</a>
+          <a class="btn ghost" href="#projetos">Ver projetos</a>
+        </p>
+        <ul class="hero-features" aria-hidden="true">
+          <li>Especialista em Front-End</li>
+          <li>Design responsivo e acessível</li>
+          <li>Entrega pontual e dedicação máxima</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sobre" class="container sobre" aria-labelledby="sobreTitle">
+      <h2 id="sobreTitle">Sobre mim</h2>
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <p>
+            Sou um jovem autodidata apaixonado por design e desenvolvimento front-end. Em apenas um ano trabalhando com projetos reais, aprendi a transformar requisitos em experiências digitais claras, rápidas e atraentes.
+            Mesmo com poucos projetos no currículo, minha vantagem é a <strong>atenção aos detalhes</strong> e a disposição para sempre aprender algo novo.
+          </p>
+          <p>
+            Especializo-me em HTML, CSS moderno (Flexbox e Grid), JavaScript vanilla e frameworks leves. Trabalho próximo ao cliente para garantir que o produto final converta visitantes em clientes.
+          </p>
+          <p><strong>Local:</strong> Salvador, Bahia • <strong>Email:</strong> <a href="mailto:gomeserik02@gmail.com">gomeserik02@gmail.com</a></p>
+        </div>
+
+        <div class="sobre-stats" aria-hidden="false">
+          <div class="card stat">
+            <strong>1 ano</strong>
+            <span>Experiência prática</span>
+          </div>
+          <div class="card stat">
+            <strong>Front-end</strong>
+            <span>Especialização</span>
+          </div>
+          <div class="card stat">
+            <strong>100%</strong>
+            <span>Dedicação ao trabalho</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="container" aria-labelledby="servicosTitle">
+      <h2 id="servicosTitle">Serviços</h2>
+      <div class="cards">
+        <article class="card" aria-labelledby="uiTitle">
+          <h3 id="uiTitle">Design de Interfaces</h3>
+          <p>Criação de layouts limpos, protótipos e mockups focados em usabilidade e conversão.</p>
+        </article>
+
+        <article class="card" aria-labelledby="devTitle">
+          <h3 id="devTitle">Desenvolvimento Front-end</h3>
+          <p>HTML semântico, CSS moderno e JavaScript para experiências interativas e performáticas.</p>
+        </article>
+
+        <article class="card" aria-labelledby="responsiveTitle">
+          <h3 id="responsiveTitle">Otimização Responsiva</h3>
+          <p>Sites que funcionam e parecem profissionais em celulares, tablets e desktops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projetos" class="container" aria-labelledby="projetosTitle">
+      <h2 id="projetosTitle">Projetos</h2>
+      <p class="muted">Projetos reais e estudos de caso — se não houver muitos, eu coloco foco na qualidade e nos resultados. Clique para ver detalhes.</p>
+
+      <div class="projects-grid" role="list">
+        <!-- Projeto 1 -->
+        <article class="project" role="listitem" tabindex="0" aria-labelledby="p1title" data-desc="Landing page promocional com foco em conversão.">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23e6eefc'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23707e92'>Preview do Projeto 1</text></svg>" alt="Preview Projeto 1"/>
+          <h3 id="p1title">Landing Promocional</h3>
+          <p class="project-meta">HTML • CSS • JS</p>
+          <button class="btn small" data-project="1">Ver detalhes</button>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="project" role="listitem" tabindex="0" aria-labelledby="p2title" data-desc="Pequeno e-commerce mockup com carrinho simples.">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23f8eefc'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23675b8a'>Preview do Projeto 2</text></svg>" alt="Preview Projeto 2"/>
+          <h3 id="p2title">Mockup E-commerce</h3>
+          <p class="project-meta">HTML • CSS • JS</p>
+          <button class="btn small" data-project="2">Ver detalhes</button>
+        </article>
+
+        <!-- Projeto 3 -->
+        <article class="project" role="listitem" tabindex="0" aria-labelledby="p3title" data-desc="Portfólio pessoal com animações leves e responsivas.">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23eefcf2'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23557a63'>Preview do Projeto 3</text></svg>" alt="Preview Projeto 3"/>
+          <h3 id="p3title">Portfólio Pessoal</h3>
+          <p class="project-meta">HTML • CSS</p>
+          <button class="btn small" data-project="3">Ver detalhes</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="cta" class="container cta" aria-labelledby="ctaTitle">
+      <h2 id="ctaTitle">Pronto para transformar sua presença online?</h2>
+      <p>Se procura alguém criativo, dedicado e com foco em entregas que convertem — <strong>sou a escolha certa</strong>. Vamos conversar!</p>
+      <a class="btn primary large" href="#contato">Solicitar orçamento</a>
+    </section>
+
+    <section id="contato" class="container contato" aria-labelledby="contatoTitle">
+      <h2 id="contatoTitle">Contato</h2>
+      <p>Envie uma mensagem direta para discutir seu projeto ou solicitar orçamento.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="name">Seu nome</label>
+        <input id="name" name="name" type="text" required minlength="2" placeholder="Ex: Maria Silva" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="seu@email.com" />
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" required minlength="10" placeholder="Descreva brevemente o projeto..."></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Enviar mensagem</button>
+          <a class="btn ghost" href="mailto:gomeserik02@gmail.com">Enviar por email</a>
+        </div>
+
+        <div id="formMessage" role="status" aria-live="polite" class="form-message"></div>
+      </form>
+
+      <address class="contact-info" aria-label="Informações de contato">
+        <strong>Erik Gomes</strong><br />
+        Salvador, Bahia<br />
+        <a href="mailto:gomeserik02@gmail.com">gomeserik02@gmail.com</a>
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Erik Gomes — Web Designer (Front-end). Feito com dedicação.</p>
+      <ul class="socials" aria-label="Redes sociais">
+        <li><a href="#" aria-label="Link para LinkedIn">LinkedIn</a></li>
+        <li><a href="#" aria-label="Link para GitHub">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Modal de projeto -->
+  <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Fechar">✕</button>
+      <h3 id="modalTitle">Detalhes do projeto</h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
